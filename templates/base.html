@@ -1,0 +1,120 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Programming Dairies - Blog for Computer Science Students</title>
+      <link rel="stylesheet" href="{% static 'css/base.css' %}">
+      <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+      <meta name="google" content="notranslate" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+      <link rel='stylesheet' id='wp-block-library-css' href='https://djangocentral.com/wp-includes/css/dist/block-library/style.min.css' type='text/css' media='all' />
+      <link rel='stylesheet' id='wp-block-library-theme-css' href='https://djangocentral.com/wp-includes/css/dist/block-library/theme.min.css' type='text/css' media='all' />
+      <link rel='stylesheet' id='prismatic-blocks-css' href='https://djangocentral.com/wp-content/plugins/prismatic/css/styles-blocks.css' type='text/css' media='all' />
+      <link rel='stylesheet' id='prismatic-highlight-css' href='https://djangocentral.com/wp-content/plugins/prismatic/lib/highlight/css/github-gist.css' type='text/css' media='all' />
+      <link rel='stylesheet' id='tie-css-styles-css' href='https://djangocentral.com/wp-content/themes/jannah/assets/css/style.min.css' type='text/css' media='all' />
+      <link rel='stylesheet' id='tie-css-ilightbox-css' href='https://djangocentral.com/wp-content/themes/jannah/assets/css/ilightbox/dark-skin/skin.css' type='text/css' media='all' />
+   </head>
+   <body>
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light shadow" id="mainNav">
+         <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'home' %}">Programming Dairies</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+               data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+               aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+               <ul class="navbar-nav ml-auto">
+                  <li class="nav-item text-black">
+                     <a class="nav-link text-black font-weight-bold" href="#">About</a>
+                  </li>
+                  <li class="nav-item text-black">
+                     <a class="nav-link text-black font-weight-bold" href="#">Policy</a>
+                  </li>
+                  <li class="nav-item text-black">
+                     <a class="nav-link text-black font-weight-bold" href="#">Contact</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+         </div>
+      </nav>
+      {% block content %}
+      <!-- Content Goes here -->
+      {% endblock content %}
+      <!-- Footer -->
+      <footer class="py-3 bg-grey">
+         <footer id="footer" class="site-footer dark-skin dark-widgetized-area">
+            <div id="footer-widgets-container">
+               <div class="container">
+                  <div class="footer-widget-area ">
+                     <div class="tie-row">
+                        <div class="tie-col-sm-6 normal-side">
+                           <div id="author-bio-widget-3" class="container-wrapper widget aboutme-widget">
+                              <div class="widget-title the-global-title">
+                                 <h4>About</h4>
+                              </div>
+                              <div class="about-author about-content-wrapper">
+                                 <div class="aboutme-widget-content">Programming Dairies is an educational site providing content on Programming, web and android development to all the programmers and budding programmers across the internet. The main goal of this site is to provide quality tips, tricks, hacks, and other Programming resources that allows beginners to improve their skills. </div>
+                                 <div class="clearfix"></div>
+                              </div>
+                              <div class="clearfix"></div>
+                           </div>
+                        </div>
+                        <!-- <div class="tie-col-sm-3 normal-side">
+                           <div id="categories-6" class="container-wrapper widget widget_categories">
+                              <div class="widget-title the-global-title">
+                                 <h4>Categories</h4>
+                              </div>
+                              <ul>
+                                 <li class="cat-item cat-item-9"><a href="https://djangocentral.com/django/">Django</a></li>
+                                 <li class="cat-item cat-item-20"><a href="https://djangocentral.com/programs/">Programs</a></li>
+                                 <li class="cat-item cat-item-3"><a href="https://djangocentral.com/python/">Python</a></li>
+                                 <li class="cat-item cat-item-22"><a href="https://djangocentral.com/tools/">Tools</a></li>
+                              </ul>
+                              <div class="clearfix"></div>
+                           </div>
+                        </div>
+                        <div class="tie-col-sm-3 normal-side">
+                           <div id="pages-5" class="container-wrapper widget widget_pages">
+                              <div class="widget-title the-global-title">
+                                 <h4>Site Links</h4>
+                              </div>
+                              <ul>
+                                 <li class="page_item page-item-260"><a href="https://djangocentral.com/about/">About Us</a></li>
+                                 <li class="page_item page-item-1034"><a href="https://djangocentral.com/contact-us/">Contact Us</a></li>
+                                 <li class="page_item page-item-269"><a href="https://djangocentral.com/disclaimer/">Disclaimer</a></li>
+                                 <li class="page_item page-item-3"><a href="https://djangocentral.com/privacy-policy/">Privacy Policy</a></li>
+                              </ul>
+                              <div class="clearfix"></div>
+                           </div>
+                        </div> -->
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div id="site-info" class="site-info">
+               <div class="container">
+                  <div class="tie-row">
+                     <div class="tie-col-md-12">
+                        <div class="copyright-text copyright-text-first">© Copyright 2019, All Rights Reserved Programming Dairies</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </footer>
+      </footer>
+      <!-- bootstrap scripts -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   </body>
+   <!-- <img src="{% static 'img/path_to_the_img' %}">
+      <script src="{% static 'img/path_to_the_script' %}"></script> -->
+</html>
