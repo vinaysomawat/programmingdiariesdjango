@@ -2,17 +2,48 @@ from django.views import generic
 from .models import Post
 from .forms import CommentForm
 from django.shortcuts import render, get_object_or_404
+from django.views.generic import TemplateView
 
-
-class PostList(generic.ListView):
-    queryset = Post.objects.filter(status=1).order_by('-created_on')
+class PostListall(generic.ListView):
+    queryset = Post.objects.filter(status=1, category=0).order_by('-created_on')
     template_name = 'index.html'
     paginate_by = 3
+
+class PostListwebdev(generic.ListView):
+    queryset = Post.objects.filter(status=1, category=1).order_by('-created_on')
+    template_name = 'index.html'
+    paginate_by = 3
+
+class PostListds(generic.ListView):
+    queryset = Post.objects.filter(status=1, category=2).order_by('-created_on')
+    template_name = 'index.html'
+    paginate_by = 3
+
+class PostListandroid(generic.ListView):
+    queryset = Post.objects.filter(status=1, category=3).order_by('-created_on')
+    template_name = 'index.html'
+    paginate_by = 3
+
+class PostListprograms(generic.ListView):
+    queryset = Post.objects.filter(status=1, category=4).order_by('-created_on')
+    template_name = 'index.html'
+    paginate_by = 3
+
+
 
 
 # class PostDetail(generic.DetailView):
 #     model = Post
 #     template_name = 'post_detail.html'
+
+# def aboutus(request):
+#     return render(request, 'aboutus.html', {})
+
+# def privacypolicy(request):
+#     return render(request, 'privacypolicy.html', {})
+
+# def contactus(request):
+#     return render(request, 'contactus.html', {})
 
 def post_detail(request, slug):
     template_name = 'post_detail.html'
@@ -37,3 +68,13 @@ def post_detail(request, slug):
                                            'comments': comments,
                                            'new_comment': new_comment,
                                            'comment_form': comment_form})
+
+
+class Aboutus(TemplateView): # new
+    template_name = 'aboutus.html'
+
+class Privacypolicy(TemplateView): # new
+    template_name = 'privacypolicy.html'
+
+class Contactus(TemplateView): # new
+    template_name = 'contactus.html'        

@@ -4,17 +4,18 @@
    <head>
       <title>Programming Dairies - Blog for Computer Science Students</title>
       <link rel="stylesheet" href="{% static 'css/base.css' %}">
+      <link href="{% static 'images/logo.png' %}" rel="shortcut icon" type="image/png" />
       <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
       <meta name="google" content="notranslate" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
-      <link rel='stylesheet' id='wp-block-library-css' href='https://djangocentral.com/wp-includes/css/dist/block-library/style.min.css' type='text/css' media='all' />
-      <link rel='stylesheet' id='wp-block-library-theme-css' href='https://djangocentral.com/wp-includes/css/dist/block-library/theme.min.css' type='text/css' media='all' />
-      <link rel='stylesheet' id='prismatic-blocks-css' href='https://djangocentral.com/wp-content/plugins/prismatic/css/styles-blocks.css' type='text/css' media='all' />
-      <link rel='stylesheet' id='prismatic-highlight-css' href='https://djangocentral.com/wp-content/plugins/prismatic/lib/highlight/css/github-gist.css' type='text/css' media='all' />
-      <link rel='stylesheet' id='tie-css-styles-css' href='https://djangocentral.com/wp-content/themes/jannah/assets/css/style.min.css' type='text/css' media='all' />
-      <link rel='stylesheet' id='tie-css-ilightbox-css' href='https://djangocentral.com/wp-content/themes/jannah/assets/css/ilightbox/dark-skin/skin.css' type='text/css' media='all' />
+      <link rel='stylesheet' id='wp-block-library-css' href="{% static 'css/style.css' %}" type='text/css' media='all' />
+      <link rel='stylesheet' id='wp-block-library-theme-css' href="{% static 'css/theme2.css' %}" type='text/css' media='all' />
+      <link rel='stylesheet' id='prismatic-blocks-css' href="{% static 'css/block.css' %}" type='text/css' media='all' />
+      <link rel='stylesheet' id='prismatic-highlight-css' href="{% static 'css/github.css' %}" type='text/css' media='all' />
+      <link rel='stylesheet' id='tie-css-styles-css' href="{% static 'css/theme_min.css' %}" type='text/css' media='all' />
+      <link rel='stylesheet' id='tie-css-ilightbox-css' href="{% static 'css/skin.css' %}" type='text/css' media='all' />
    </head>
    <body>
       <!-- Navigation -->
@@ -29,13 +30,16 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                <ul class="navbar-nav ml-auto">
                   <li class="nav-item text-black">
-                     <a class="nav-link text-black font-weight-bold" href="#">About</a>
+                     <a class="nav-link text-black font-weight-bold" href="{% url 'c-programming' %}">PROGRAMS</a>
                   </li>
                   <li class="nav-item text-black">
-                     <a class="nav-link text-black font-weight-bold" href="#">Policy</a>
+                     <a class="nav-link text-black font-weight-bold" href="{% url 'data-structure' %}">DS & ALGORITHMS</a>
                   </li>
                   <li class="nav-item text-black">
-                     <a class="nav-link text-black font-weight-bold" href="#">Contact</a>
+                     <a class="nav-link text-black font-weight-bold" href="{% url 'web-development' %}">WEB DEVELOPMENT</a>
+                  </li>
+                  <li class="nav-item text-black">
+                     <a class="nav-link text-black font-weight-bold" href="{% url 'android-development' %}">ANDROID</a>
                   </li>
                </ul>
             </div>
@@ -55,7 +59,7 @@
                         <div class="tie-col-sm-6 normal-side">
                            <div id="author-bio-widget-3" class="container-wrapper widget aboutme-widget">
                               <div class="widget-title the-global-title">
-                                 <h4>About</h4>
+                                 <h4><strong>About</strong></h4>
                               </div>
                               <div class="about-author about-content-wrapper">
                                  <div class="aboutme-widget-content">Programming Dairies is an educational site providing content on Programming, web and android development to all the programmers and budding programmers across the internet. The main goal of this site is to provide quality tips, tricks, hacks, and other Programming resources that allows beginners to improve their skills. </div>
@@ -64,34 +68,33 @@
                               <div class="clearfix"></div>
                            </div>
                         </div>
-                        <!-- <div class="tie-col-sm-3 normal-side">
-                           <div id="categories-6" class="container-wrapper widget widget_categories">
+                        <div class="tie-col-sm-3 normal-side">
+                           <div id="categories-6" class="container-wrapper widget ">
                               <div class="widget-title the-global-title">
-                                 <h4>Categories</h4>
+                                 <h4><strong>Categories</strong></h4>
                               </div>
                               <ul>
-                                 <li class="cat-item cat-item-9"><a href="https://djangocentral.com/django/">Django</a></li>
-                                 <li class="cat-item cat-item-20"><a href="https://djangocentral.com/programs/">Programs</a></li>
-                                 <li class="cat-item cat-item-3"><a href="https://djangocentral.com/python/">Python</a></li>
-                                 <li class="cat-item cat-item-22"><a href="https://djangocentral.com/tools/">Tools</a></li>
+                                 <li class="cat-item cat-item-9" ><a href="https://djangocentral.com/django/">Programs</a></li>
+                                 <li class="cat-item cat-item-20"><a href="https://djangocentral.com/programs/">Data Structures</a></li>
+                                 <li class="cat-item cat-item-3"><a href="https://djangocentral.com/python/">Web Development</a></li>
+                                 <li class="cat-item cat-item-22"><a href="https://djangocentral.com/tools/">Android Development</a></li>
                               </ul>
                               <div class="clearfix"></div>
                            </div>
                         </div>
                         <div class="tie-col-sm-3 normal-side">
-                           <div id="pages-5" class="container-wrapper widget widget_pages">
+                           <div id="pages-5" class="container-wrapper widget">
                               <div class="widget-title the-global-title">
-                                 <h4>Site Links</h4>
+                                 <h4><strong>Site Links</strong></h4>
                               </div>
                               <ul>
-                                 <li class="page_item page-item-260"><a href="https://djangocentral.com/about/">About Us</a></li>
-                                 <li class="page_item page-item-1034"><a href="https://djangocentral.com/contact-us/">Contact Us</a></li>
-                                 <li class="page_item page-item-269"><a href="https://djangocentral.com/disclaimer/">Disclaimer</a></li>
-                                 <li class="page_item page-item-3"><a href="https://djangocentral.com/privacy-policy/">Privacy Policy</a></li>
+                                 <li class="page_item page-item-260"><a href="{% url 'aboutus' %}">About Us</a></li>
+                                 <li class="page_item page-item-1034"><a href="{% url 'privacypolicy' %}">Contact Us</a></li>
+                                 <li class="page_item page-item-3"><a href="{% url 'contactus' %}">Privacy Policy</a></li>
                               </ul>
                               <div class="clearfix"></div>
                            </div>
-                        </div> -->
+                        </div>
                      </div>
                   </div>
                </div>

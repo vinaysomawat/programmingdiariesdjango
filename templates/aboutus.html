@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+  body {
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    background-color: #fdfdfd;
+  }
+</style>
+
+<div class="container">
+  <div class="row">
+  	<div class="col-md-8 mt-3 left">
+  		<div class="card mb-4">
+        <div class="card-body">
+          <h2 class="card-title" style="text-align: center;">About Us</h2>
+
+          <p class="card-text"><strong>Programming Dairies</strong> is an educational site providing content on programming,  web development, and android development to all the programmers and budding programmers across the internet.</p>
+          <p>In Programming Dairies, we write simple and easy to understand tutorials covering all the essential topics of different frameworks and Programming concepts.<br><br>Founded by <strong>Vinay Somawat</strong>, the sole purpose of Programming Dairies is to provide education to everyone even to those who can’t afford it.</p>
+          <p>The Programming Dairies team is always working to make it a better resource for our users. We regularly update our articles to improve their quality and correctness.</p>
+          <p>For advertising opportunities or any queries regarding the site visit <a href="{% url 'contactus'  %}">here</a></p>
+        </div>
+
+      </div>
+  	</div>
+  	</div>
+  </div>
+
+{% endblock%}
