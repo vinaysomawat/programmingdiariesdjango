@@ -8,11 +8,11 @@ STATUS = (
 )
 
 CATEGORY = (
-    (0, "home"),
-    (1, "web-development"),
-    (2, "data-structure"),
-    (3, "android-development"),
-    (4, "c-programming")
+    (0, "Home"),
+    (1, "Web-Development"),
+    (2, "Data-Structure"),
+    (3, "Android-Development"),
+    (4, "C-Programming")
 )
 
 class Post(models.Model):

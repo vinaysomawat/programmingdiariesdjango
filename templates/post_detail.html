@@ -32,7 +32,7 @@
       <div class="card-body">
         <!-- comments -->
         {% with comments.count as total_comments %}
-        <h2>{{ total_comments }} comments</h2>
+        <h3>{{ total_comments }} comments</h3>
 
         <p>
           {% endwith %} {% for comment in comments %}
@@ -58,7 +58,7 @@
           Your comment is awaiting moderation
         </div>
         {% else %}
-        <h3>Leave a comment</h3>
+        <p><strong>Leave a comment</strong></p>
         <form method="post" style="margin-top: 1.3em;">
           {{ comment_form | crispy }}
           {% csrf_token %}

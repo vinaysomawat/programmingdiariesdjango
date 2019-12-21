@@ -21,7 +21,7 @@
       <!-- Navigation -->
       <nav class="navbar navbar-expand-lg navbar-light bg-light shadow" id="mainNav">
          <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'home' %}">Programming Dairies</a>
+            <a class="navbar-brand" href="{% url 'home' %}">PROGRAMMING DAIRIES</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                aria-label="Toggle navigation">
@@ -74,10 +74,10 @@
                                  <h4><strong>Categories</strong></h4>
                               </div>
                               <ul>
-                                 <li class="cat-item cat-item-9" ><a href="https://djangocentral.com/django/">Programs</a></li>
-                                 <li class="cat-item cat-item-20"><a href="https://djangocentral.com/programs/">Data Structures</a></li>
-                                 <li class="cat-item cat-item-3"><a href="https://djangocentral.com/python/">Web Development</a></li>
-                                 <li class="cat-item cat-item-22"><a href="https://djangocentral.com/tools/">Android Development</a></li>
+                                 <li class="cat-item cat-item-9" ><a href="{% url 'c-programming' %}">Programs</a></li>
+                                 <li class="cat-item cat-item-20"><a href="{% url 'data-structure' %}">Data Structures</a></li>
+                                 <li class="cat-item cat-item-3"><a href="{% url 'web-development' %}">Web Development</a></li>
+                                 <li class="cat-item cat-item-22"><a href="{% url 'android-development' %}">Android Development</a></li>
                               </ul>
                               <div class="clearfix"></div>
                            </div>
@@ -89,8 +89,8 @@
                               </div>
                               <ul>
                                  <li class="page_item page-item-260"><a href="{% url 'aboutus' %}">About Us</a></li>
-                                 <li class="page_item page-item-1034"><a href="{% url 'privacypolicy' %}">Contact Us</a></li>
-                                 <li class="page_item page-item-3"><a href="{% url 'contactus' %}">Privacy Policy</a></li>
+                                 <li class="page_item page-item-3"><a href="{% url 'privacypolicy' %}">Privacy Policy</a></li>
+                                 <li class="page_item page-item-1034"><a href="{% url 'contactus' %}">Contact Us</a></li>
                               </ul>
                               <div class="clearfix"></div>
                            </div>

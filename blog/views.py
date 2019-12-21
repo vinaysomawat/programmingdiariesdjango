@@ -5,7 +5,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views.generic import TemplateView
 
 class PostListall(generic.ListView):
-    queryset = Post.objects.filter(status=1, category=0).order_by('-created_on')
+    queryset = Post.objects.filter(status=1).order_by('-created_on')
     template_name = 'index.html'
     paginate_by = 3
 
